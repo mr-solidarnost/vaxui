@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Простой сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            transition: background-color 0.5s;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        img{
+            max-width: 40%;
+            max-height: 100%;
+            height: auto;
+            border-radius: 999px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            display: none;
+        }
+        .show {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Привет!</h1>
+    <p>Попробуй нажать на кнопку</p>
+    <button onclick="changeColor()">Я точно кнопка</button>
+    <img id="aaa" src="вахуи.jpg" alt="Картинка 1">
+
+    <script>
+        function changeColor() {
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+            aaa.classList.add('show');
+        }
+    </script>
+</body>
+</html>
